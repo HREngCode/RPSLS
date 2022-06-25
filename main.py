@@ -1,19 +1,31 @@
 #Rock Paper Scissors Lizard Spock
 
 from game import Game
+game = Game()
+
+def opening_welcome():
+    print("Welcome to Rock Paper Scissors Lizard Spock")
+    print("")
+    print("Each match will be the best of three games")
+    print("Use the number keys to make your selection")
+    print(" ")
+    print("Scissors cut Paper")
+    print("Paper covers Rock")
+    print("Rock crushes Lizard")
+    print("Lizard poisons Spock")
+    print("Spock smashes Scissors")
+    print("Scissors decapitates Lizard")
+    print("Lizard eats Paper")
+    print("Paper disproves Spock")
+    print("Spock vaporizes Rock")
+    print("Rock crushes Scissors")
+    game.enter_number_of_players()
+
+def run_game():
+    opening_welcome()
 
 play_game_question = input("Would you like to play Rock Paper Scissors Lizard Spock? y/n ")
 if play_game_question == "y":
-    game = Game()
-    game.run_game()
-
-def run_game(self):
-    game.opening_welcome()
-
-game.enter_number_of_players()
-
-print("Choose 0 for Rock")
-print("Choose 1 for Paper")
-print("Choose 2 for Scissors")
-print("Choose 3 for Lizard")
-print("Choose 4 for Spock")
+    run_game()
+else:
+    print("Sorry to hear that. Let's play again later.")
