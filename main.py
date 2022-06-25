@@ -19,10 +19,10 @@ def opening_welcome():
     print("Paper disproves Spock")
     print("Spock vaporizes Rock")
     print("Rock crushes Scissors")
-    game.enter_number_of_players()
 
 def run_game():
     opening_welcome()
+    game.enter_number_of_players()
 
 play_game_question = input("Would you like to play Rock Paper Scissors Lizard Spock? y/n ")
 if play_game_question == "y":

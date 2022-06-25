@@ -1,10 +1,11 @@
 import random
 class Player:
-    def __init__(self, name):
-        self.name = name
+    def __init__(self):
+        self.name = "name"
         self.gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
         self.score = 0
         self.number_of_players = 0
+
 
     def choose_random_gesture(self, list):
         random_item = random.choice(list)
