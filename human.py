@@ -6,5 +6,7 @@ class Human(Player):
         super().__init__()
         self.human_gesture = Player
 
+
+
     # def 
 

@@ -6,10 +6,12 @@ class Player:
         self.score = 0
         self.number_of_players = 0
 
-
     def choose_random_gesture(self, list):
         random_item = random.choice(list)
         return random_item
+
+    def add_to_score(self):
+        self.score += 1
 
     # player_one = " "
     # player_two = " "
