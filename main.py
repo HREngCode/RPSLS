@@ -39,6 +39,7 @@ def opening_welcome():
 def run_game():
     opening_welcome()
     game.enter_number_of_players()
+    game.start_round()
 
 play_game_question = input("Would you like to play Rock Paper Scissors Lizard Spock? y/n ")
 if play_game_question == "y":
