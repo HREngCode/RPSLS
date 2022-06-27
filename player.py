@@ -34,7 +34,7 @@ class Player:
         if self.number_of_players == "1":
             gesture_pick = self.choose_random_gesture(self.gestures)
             player_two = gesture_pick
-            time.sleep(1)
+            # time.sleep(1)
             print(f'Player two has selected {player_two}!')
         else:
             gesture_pick = input("Player 2 please select a gesture: ")
@@ -48,7 +48,7 @@ class Player:
                 player_two = self.gestures[3]
             elif gesture_pick == "4":
                 player_two = self.gestures[4]
-            time.sleep(1)
+            # time.sleep(1)
             print(f'Player two has selected {player_two}!')
 
     def add_to_score(self):

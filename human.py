@@ -7,6 +7,10 @@ class Human(Player):
         self.human_player_two = self.name
         self.human_gesture = self.gestures
 
+    def assign_player_names():
+        
+
+
     
         
 
