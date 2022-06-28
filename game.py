@@ -1,10 +1,12 @@
+from ast import Return
 import time
 from player import Player
 from human import Human
 from ai import Ai
-player = Player()
-human_player = Human()
-ai_player = Ai()
+
+
+player_one = Player("Player One")
+player_two = Player("Player Two")
 
 class Game:
     def __init__(self):
@@ -13,17 +15,14 @@ class Game:
         self.winner = True
         self.number_of_wins = 0
 
-    def assign_name(self)
-        if self.game_type == "Human vs. Human":
-            player_one = human_player.human_player_one
-            player_two = human_player.human_player_two
-        elif self.game_type == "Human vs. AI":
-            player_one = human_player.human_player_one
-            player_two = ai_player.ai_player_one
+    def display_options():
+        print("Select 0 for Rock")
+        print("Select 1 for Paper")
+        print("Select 2 for Scissors")
+        print("Select 3 for Lizard")
+        print("Select 4 for Spock")
 
     def start_round(self):
-
-
         if player_one == "Rock" and (player_two == "Paper" or player_two == "Spock"):
             self.winner = False
         elif player_one == "Rock" and (player_two == "Scissors" or player_two == "Lizard"):
@@ -46,23 +45,39 @@ class Game:
             self.winner = False
         else:
             print("The game ends in a tie")
+            
 
     def run_human_vs_ai(self):
-        player.select_gesture()
+        # self.display_options()
+        gesture_pick = player_one.select_gesture()
+        print(gesture_pick)
+        gesture_pick = player_one.assign_gesture
+        player_one.gesture_selected = gesture_pick
+        print(f'Player one has selected {player_one.gesture_selected}')
+        player_two = Ai()
+        player_two.choose_random_gesture(player_two.gestures)
+        gesture_pick = player_two.choose_random_gesture(player_two.gestures)
+        player_two = gesture_pick
+        print(f'Player two has selected {player_two}')
         self.start_round()
     
     def run_human_vs_human(self):
-        player.select_gesture()
+        # self.display_options()
+        player_one.select_gesture()
+        print(f'Player one has selected {player_one.gesture_selected}')
+        player_two.select_gesture()
+        print(f'Player two has selected {player_two.gesture_selected}!')
         self.start_round()
+
 
     def enter_number_of_players(self):
         self.number_of_players = input("How many players? 1 or 2: ")
         if self.number_of_players == "1":
             self.game_type[0]
-            self.run_human_vs_ai(Player)
+            self.run_human_vs_ai()
         elif self.number_of_players == "2":
             self.game_type[1]
-            self.run_human_vs_human(Player)
+            self.run_human_vs_human()
         elif self.number_of_players != "1" and self.number_of_players != "2":
             print("You must enter a valid number of players.")
             self.enter_number_of_players()

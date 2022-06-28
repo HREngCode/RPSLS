@@ -1,7 +1,7 @@
 #Rock Paper Scissors Lizard Spock
 import time
 from game import Game
-game = Game()
+game_item = Game()
 
 def opening_welcome():
     print("Welcome to Rock Paper Scissors Lizard Spock")
@@ -12,6 +12,8 @@ def opening_welcome():
     # time.sleep(1)
     print(" ")
     # time.sleep(1)
+
+def print_rules():
     print("The rules are as follows:")
     # time.sleep(1)
     print("Scissors cut Paper")
@@ -34,13 +36,17 @@ def opening_welcome():
     # time.sleep(1)
     print("Rock crushes Scissors")
 
-def run_game():
-    opening_welcome()
-    game.enter_number_of_players()
-    game.start_round()
 
+
+def run_opening():
+    opening_welcome()
+    print_rules()
+    game_item.enter_number_of_players()
+    game_item.start_round()
+
+#Start to the program 
 play_game_question = input("Would you like to play Rock Paper Scissors Lizard Spock? y/n ")
 if play_game_question == "y":
-    run_game()
+    run_opening()
 else:
     print("Sorry to hear that. Let's play again later.")
