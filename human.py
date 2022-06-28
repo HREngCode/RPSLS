@@ -3,17 +3,23 @@ from player import Player
 class Human(Player):
     def __init__(self):
         super().__init__()
-        self.human_player_one = Player("Player 1")
-        self.human_player_two = Player("Player 2")
-        self.human_gesture = self.gestures
+        self.name = "human player"
 
 
-        if self.number_of_players == "1":
-            
-            self.human_gesture = input("Player 1 please select a gesture: ")
-        elif self.number_of_players == "2":
+    def choose_gesture(self):
+        print("Select 0 for Rock")
+        print("Select 1 for Paper")
+        print("Select 2 for Scissors")
+        print("Select 3 for Lizard")
+        print("Select 4 for Spock")
 
-            print(f'Player one has selected {player_one}!')
+        user_choice = int(input("Select a gesture: "))
+        if user_choice > 4:
+            print("Please enter a valid answer")
+            self.choose_gesture()
+        else:
+            self.chosen_gesture = self.gestures[user_choice]
+            print(f'{self.name} has chosen {self.chosen_gesture}')
 
 
 
