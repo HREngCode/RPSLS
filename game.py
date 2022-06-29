@@ -49,7 +49,7 @@ class Game:
 
     def enter_number_of_players(self):
         time.sleep(1)
-        self.number_of_players = input("Game Mode: Press 1 for Human vs. Ai, Press 2 for Human vs. Human: ")
+        self.number_of_players = input("Game Mode: Press 1 for Human vs. Ai, Press 2 for Human vs. Human, Press 3 for Ai vs Ai: ")
         if self.number_of_players == "1":
             self.player_one = Human()
             self.player_one.name = "Player 1"
@@ -60,6 +60,12 @@ class Game:
             self.player_one = Human()
             self.player_one.name = "Player 1"
             self.player_two = Human()
+            self.player_two.name = "Player 2"
+            self.start_round()
+        elif self.number_of_players == "3":
+            self.player_one = Ai()
+            self.player_one.name = "Player 1"
+            self.player_two = Ai()
             self.player_two.name = "Player 2"
             self.start_round()
         elif self.number_of_players != "1" and self.number_of_players != "2":
