@@ -1,4 +1,5 @@
 from player import Player
+import time
 
 class Human(Player):
     def __init__(self):
@@ -15,10 +16,12 @@ class Human(Player):
 
         user_choice = int(input("Select a gesture: "))
         if user_choice > 4:
+            time.sleep(1)
             print("Please enter a valid answer")
             self.choose_gesture()
         else:
             self.chosen_gesture = self.gestures[user_choice]
+            time.sleep(1)
             print(f'{self.name} has chosen {self.chosen_gesture}')
 
 

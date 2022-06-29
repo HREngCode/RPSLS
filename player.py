@@ -12,6 +12,7 @@ class Player:
 
     def choose_gesture(self):
         self.chosen_gesture = random.choice(self.gestures)
+        time.sleep(1)
         print(f'{self.name} has chosen {self.chosen_gesture}')
 
     

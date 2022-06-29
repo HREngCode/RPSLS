@@ -18,37 +18,38 @@ class Game:
 
     def opening_welcome(self):
         print("Welcome to Rock Paper Scissors Lizard Spock")
-        # time.sleep(1)
+        time.sleep(1)
         print("Each match will be the best of three games")
-        # time.sleep(1)
+        time.sleep(1)
         print("Use the number keys to make your selection")
-        # time.sleep(1)
+        time.sleep(1)
         print(" ")
-        # time.sleep(1)
+        time.sleep(1)
         print("The rules are as follows:")
-        # time.sleep(1)
+        time.sleep(1)
         print("Scissors cut Paper")
-        # time.sleep(1)
+        time.sleep(1)
         print("Paper covers Rock")
-        # time.sleep(1)
+        time.sleep(1)
         print("Rock crushes Lizard")
-        # time.sleep(1)
+        time.sleep(1)
         print("Lizard poisons Spock")
-        # time.sleep(1)
+        time.sleep(1)
         print("Spock smashes Scissors")
-        # time.sleep(1)
+        time.sleep(1)
         print("Scissors decapitates Lizard")
-        # time.sleep(1)
+        time.sleep(1)
         print("Lizard eats Paper")
-        # time.sleep(1)
+        time.sleep(1)
         print("Paper disproves Spock")
-        # time.sleep(1)
+        time.sleep(1)
         print("Spock vaporizes Rock")
-        # time.sleep(1)
+        time.sleep(1)
         print("Rock crushes Scissors")
 
     def enter_number_of_players(self):
-        self.number_of_players = input("Game Mode: Press 1 for Human vs. Ai or Press 2 for Human vs. Human: ")
+        time.sleep(1)
+        self.number_of_players = input("Game Mode: Press 1 for Human vs. Ai, Press 2 for Human vs. Human: ")
         if self.number_of_players == "1":
             self.player_one = Human()
             self.player_one.name = "Player 1"
@@ -68,10 +69,12 @@ class Game:
     def start_round(self):
         while self.player_one.score < 2 and self.player_two.score < 2:
             self.game_round += 1
+            time.sleep(1)
             print(f'Start Round {self.game_round}')
             self.player_one.choose_gesture()
             self.player_two.choose_gesture()
             if self.player_one.chosen_gesture == self.player_two.chosen_gesture:
+                time.sleep(1)
                 print("The game is a tie. Start again.")
             elif self.player_one == "Rock" and (self.player_two == "Scissors" or self.player_two == "Lizard"):
                 self.winner = True
@@ -92,14 +95,18 @@ class Game:
                 self.winner = False
                 self.player_two.add_to_score()
 
+        time.sleep(1)
         print(f'{self.player_one.score} wins for Player 1')
+        time.sleep(1)
         print(f'{self.player_two.score} wins for Player 2')
         self.run_winner()
 
     def run_winner(self):
             if self.player_one.score > self.player_one.score:
+                time.sleep(1)
                 print("Player 1 is the winner")
             else:
+                time.sleep(1)
                 print("Player 2 is the winner")
             
             
